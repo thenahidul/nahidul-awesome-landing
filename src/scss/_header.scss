@@ -1,0 +1,71 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+.naf__header {
+	padding-block-start: 50px;
+	
+	@media( max-width: 1024px ) {
+		padding-block-end: 50px;
+	}
+
+	.naf__hero {
+		&-content {
+			max-width: 630px;
+		}
+
+		h1 {
+			font-weight: 400;
+			line-height: normal;
+		}
+
+		.body-text {
+			font-size: 20px;
+			line-height: 1.4;
+		}
+
+		&-badge {
+			top: -1px;
+			right: -45px;
+		}
+
+		&-video {
+			background-color: #fff;
+			box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.15);
+			border-radius: 6px;
+			overflow: hidden;
+			position: relative;
+			z-index: 99;
+
+			&.is-playing {
+				width: 100%;
+				padding-top: 56.25%; 
+
+				iframe {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					border: 0;
+				}
+			}
+
+			&-thumbnail {
+				display: block;
+				width: 100%;
+			}
+
+			&-btn {
+				cursor: pointer;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				box-shadow: none;
+				background: none;
+				border: none;
+			}
+
+		}
+		
+	}
+}

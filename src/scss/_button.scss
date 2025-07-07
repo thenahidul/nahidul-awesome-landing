@@ -1,0 +1,60 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+.naf__button {
+	text-align: center;
+	padding: 16px;
+	font-size: 20px;
+	font-weight: 700;
+	border-radius: 3px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+	white-space: nowrap;
+
+	@media( min-width: $tablet-up ) {
+		width: 290px;
+	}
+
+	@media( max-width: $tablet-down ) {
+		width: 100%;
+		max-width: 290px;
+	}
+
+	&--primary {
+		color: #fff;
+		background-color: $orange;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+
+		&:hover {
+			background-color: color.adjust($orange, $lightness: -7%)
+		}
+	}
+
+	&--secondary {
+		color: $text-secondary;
+		background-color: #fff;
+		border: 1px solid $border;
+
+		&:hover {
+			background-color: color.adjust(#fff, $lightness: -7%);
+		}
+	}
+	
+	&-group {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+
+		@media( min-width: $tablet-up ) {
+			gap: 50px;
+		}
+
+		@media( max-width: $tablet-down ) {
+			flex-direction: column;
+			gap: 25px;
+		}
+	}
+}
+

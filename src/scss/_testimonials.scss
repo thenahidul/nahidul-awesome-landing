@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+.naf__testimonials {
+	background: linear-gradient(180deg, #f8f8f8 0, #FFF 100%);
+
+	.naf__testimonial-item {
+		padding: 30px;
+		border-radius: 6px;
+		background-color: #fff;
+
+		blockquote {
+			margin: 0;
+			padding: 0;
+			
+			p {
+				quotes: none;
+			}
+		}
+
+		figcaption {
+			cite {
+				font-style: normal;
+				color: $text-hint;
+				font-size: 14px;
+			}
+		}
+
+		.naf-stars {
+			img {
+				width: 16px;
+				height: 16px;
+				display: inline-block;
+			}
+		}
+	}
+
+	.naf__button-group {
+		@media (min-width: 1025px) {
+			padding-top: $section-padding-large;
+		}	
+
+		@media (max-width: 1024px) {
+			padding-top: $section-padding-small;
+		}
+	}
+}

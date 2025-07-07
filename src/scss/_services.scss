@@ -1,0 +1,72 @@
+@use 'variables' as *;
+
+$large-gap: 100px;
+$smal-gap: 50px;
+
+.naf__services {
+
+	.naf-row {
+		overflow: hidden; /* does the trick to hide extra borders*/
+		gap: $large-gap;
+
+		@media (max-width: $desktop-down) {
+			// gap: $smal-gap;
+		}
+	}
+
+	.naf-col {
+		flex: 1 1 calc((100% - $large-gap*2) / 3);  /* 3 columns with 100px gaps */
+		max-width: none;
+
+		@media (max-width: $desktop-down) {
+			flex: 1 1 calc((100% - $large-gap) / 2);
+		}
+
+		@media (max-width: $tablet-down) {
+			flex: 1 1 100%; 
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -50px;
+			width: 1px;
+			height: calc(100% + $large-gap);
+			background-color: $border;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -50px;
+   			left: 0;
+			width: calc(100% + $large-gap);
+			height: 1px;
+			background-color: $border;
+		}
+	}
+
+	.naf__service-item {
+		.heading-text {
+			span {
+				@media (min-width: $tablet-down) {
+					display: block;
+				}
+			}
+		}
+
+		&-icon {
+			display: block;
+			width: 48px;
+			height: 48px;
+	
+			img {
+				max-width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,33 @@
+// Fonts
+$primary-font: Lato, sans-serif;
+$heading-font: Arvo, sans-serif;
+
+// Typography
+$heading-font-size: 24px;
+$heading-line-height: 1.25; // 30 / 24
+
+$body-font-size: 16px;
+$body-line-height: 1.5; // 24 / 16
+
+// Colors
+$bg-white: #ffffff;
+$bg-light: #f8f8f8;
+$border: #dddddd;
+$text-primary: #444444;
+$text-secondary: #777777;
+$text-hint: #aaaaaa;
+$orange: #e27730;
+$yellow: #fdb82c;
+$blue: #036aab;
+$blue-dark: #025a91;
+
+// Spacings
+$section-padding-large: 100px;
+$section-padding-medium: 75px;
+$section-padding-small: 50px;
+
+// Breakpoints
+$desktop-up: 1025px;
+$desktop-down: 1024px;
+$tablet-up: 768px;
+$tablet-down: 767px;

@@ -1,0 +1,97 @@
+@use 'variables' as *;
+
+$large-gap: 100px;
+$smal-gap: 50px;
+
+.naf__footer {
+	padding-block-end: $section-padding-large;
+
+	@media (max-width: $desktop-down) {
+		padding-block-end: $section-padding-small;
+	}
+
+	.naf-container {
+		@media (min-width: $desktop-up) {
+			gap: $large-gap;
+		}
+
+		@media (max-width: $desktop-down) {
+			gap: $smal-gap;
+		}
+	}
+
+	.naf-row {
+		overflow: hidden;
+		gap: $large-gap;
+
+		@media (max-width: $tablet-up) {
+			overflow: hidden;
+		}
+	}
+
+	.naf-col {
+		flex: 1 1 calc((100% - $large-gap*2) / 3);  /* 3 columns with 100px gaps */
+		max-width: none;
+
+		@media (max-width: $desktop-down) {
+			flex: 1 1 calc((100% - $large-gap) / 2);
+
+			&:last-of-type {
+				padding-block-end: $smal-gap;
+				border-bottom: 1px solid $border;
+			}
+		}
+
+		@media (max-width: $tablet-down) {
+			flex: 1 1 100%;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -50px;
+			width: 1px;
+			height: calc(100% + $large-gap);
+			background-color: $border;
+
+			@media (max-width: $desktop-down) {
+				height: calc(100% + $smal-gap );
+			}
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -50px;
+   			left: 0;
+			width: calc(100% + $large-gap);
+			height: 1px;
+			background-color: $border;
+		}
+	}
+
+	&-title {
+		line-height: 1.5;
+	}
+
+	.naf__footer-service {
+
+		.naf__footer-icon {
+			display: block;
+			width: 40px;
+			height: 40px;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	.naf__footer-note {
+		.body-text {
+			font-size: 18px;
+		}
+	}
+}
