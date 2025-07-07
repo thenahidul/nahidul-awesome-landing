@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "webpack --mode development --watch",
 		"build": "webpack --mode production",
-		"zip": "zip -r build.zip index.html build"
+		"zip": "zip -r nahidul-awesome-landing.zip index.html assets"
 	},
 	"keywords": [],
 	"author": "",
