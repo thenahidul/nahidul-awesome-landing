@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const CopyPlugin = require( 'copy-webpack-plugin' );
 
 // Paths
-const buildDir = 'build';
+const buildDir = 'assets';
 const srcDir = 'src';
 
 module.exports = {

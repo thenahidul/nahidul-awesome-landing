@@ -1,6 +1,5 @@
-@use 'variables' as *;
-@use 'sass:color';
 @use 'reset';
+@use 'base';
 @use 'fonts';
 @use 'utils';
 @use 'button';
@@ -11,43 +10,3 @@
 @use 'screenshots';
 @use 'footer';
 @use 'lightbox';
-
-body {
-	font-family: $primary-font;
-	font-size: $body-font-size;
-	line-height: $body-line-height;
-	color: $text-secondary;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	color: $text-secondary;
-}
-
-h1 {
-	font-family: $heading-font;
-	font-size: 48px;
-	line-height: $heading-line-height;
-}
-
-a:not(.naf__button) {
-	color: $blue;
-	text-decoration: none;
-
-	&:hover {
-		color: color.adjust( $blue, $lightness: 15% );
-		text-decoration: underline;
-	}
-}
-
-@media( min-width: 1025px ) {
-	.naf {
-		&__header {
-			margin-block-end: -270px;
-		}
-
-		&-wrapper main {
-			padding-block-start: 270px;
-			background: $bg-white;
-		}
-	}
-}
