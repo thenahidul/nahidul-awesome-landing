@@ -55,6 +55,13 @@ module.exports = {
 				generator: {
 					filename: 'fonts/[name][ext]',
 				},
+			},
+			{
+				test: /\.(mp4|webm)$/i,
+				type: 'asset/resource',
+				generator: {
+					filename: 'videos/[name][ext]',
+				},
 			}
 		]
 	},
@@ -67,6 +74,10 @@ module.exports = {
 				{
 					from: path.resolve( __dirname, `${srcDir}/images` ),
 					to: path.resolve( __dirname, `${buildDir}/images` )
+				},
+				{
+					from: path.resolve( __dirname, `${srcDir}/videos` ),
+					to: path.resolve( __dirname, `${buildDir}/videos` )
 				}
 			],
 		} ),

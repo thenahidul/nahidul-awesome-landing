@@ -2,8 +2,8 @@
 import '../scss/main.scss';
 
 // Import classes
-// import VideoPlayer from './video-player.js';
-import Lightbox from './lightbox.js';
+// import VideoPlayer from './video';
+import Lightbox from './lightbox';
 
 // Init on DOM ready
 document.addEventListener( 'DOMContentLoaded', function() {

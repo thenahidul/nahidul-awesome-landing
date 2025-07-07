@@ -1,4 +1,4 @@
-import VideoPlayer from './video-player';
+import Video from './video';
 
 class Lightbox {
 	constructor() {
@@ -56,7 +56,7 @@ class Lightbox {
 		this.content.innerHTML = '';
 
 		if ( this.isVideo( url ) ) {
-			const videoPlayer = new VideoPlayer( url, this.content );
+			const videoPlayer = new Video( url, this.content );
 			videoPlayer.playVideo();
 		} else if ( trigger?.querySelector( 'img' ) ) {
 			const clonedImage = trigger.querySelector( 'img' ).cloneNode( true );
@@ -77,9 +77,12 @@ class Lightbox {
 		this.content.innerHTML = '';
 	}
 
-	// Check if URL is a video
+	// Check if the URL is a video
 	isVideo( url ) {
-		return url.includes( 'youtube.com' ) || url.includes( 'youtu.be' ) || url.includes( 'vimeo.com' );
+		return url.includes( 'youtube.com' )
+			|| url.includes( 'youtu.be' )
+			|| url.includes( 'vimeo.com' )
+			|| /\.(mp4|webm|ogg)$/i.test( url );
 	}
 }
 

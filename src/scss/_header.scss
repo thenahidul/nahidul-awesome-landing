@@ -3,7 +3,7 @@
 
 .naf__header {
 	padding-block-start: 50px;
-	
+
 	@media( max-width: 1024px ) {
 		padding-block-end: 50px;
 	}
@@ -38,7 +38,7 @@
 
 			&.is-playing {
 				width: 100%;
-				padding-top: 56.25%; 
+				padding-top: 56.25%;
 
 				iframe {
 					position: absolute;
@@ -63,9 +63,16 @@
 				box-shadow: none;
 				background: none;
 				border: none;
+
+				img {
+					@media (max-width: $tablet-down) {
+						width: 64px;
+						height: 64px;
+					}
+				}
 			}
 
 		}
-		
+
 	}
 }
