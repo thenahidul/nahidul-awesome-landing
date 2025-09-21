@@ -1,4 +1,4 @@
-# Nahidul Awesome Landing
+# Nahidul Awesome Landing (Awesome Motive Landing Page Challenge)
 
 A modern, responsive landing page built from Figma design specifications with attention to detail and clean code practices.
 
